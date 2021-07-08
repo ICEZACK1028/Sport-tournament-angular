@@ -1,0 +1,57 @@
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Crear cuenta</h1><br>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Nombres" id="nombre" name="nombre" #nombre="ngModel" [(ngModel)]="usuarioModel.nombre">
+        <input type="text" class="form-control" placeholder="Apellidos" id="apellido" name="apellido" #apellido="ngModel" [(ngModel)]="usuarioModel.apellido">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Usuario" id="usuario" name="usuario" #usuario="ngModel" [(ngModel)]="usuarioModel.usuario">
+        <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" #password="ngModel" [(ngModel)]="usuarioModel.password">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Teléfono" id="telefono" name="telefono" #telefono="ngModel" [(ngModel)]="usuarioModel.telefono">
+        <input type="email" class="form-control" placeholder="Correo" id="correo" name="correo" #correo="ngModel" [(ngModel)]="usuarioModel.correo">
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Dirección" id="direccion" name="direccion" #direccion="ngModel" [(ngModel)]="usuarioModel.direccion">
+      </div>
+
+      <div class="input-group" >
+        <span class="input-group-text" id="spanImagen">Imagen</span>
+        <textarea class="form-control" aria-label="With textarea" id="imagen" name="imagen" #imagen="ngModel" [(ngModel)]="usuarioModel.imagen"></textarea>
+      </div><br>
+
+			<button (click)="registro()">Registrarse</button>
+    </form>
+
+  </div>
+	<div class="form-container sign-in-container">
+		<form>
+			<h1>Iniciar sesión</h1><br>
+			<input type="email" class="inputL" name='usuario' #usuario='ngModel' [(ngModel)]='usuarioModel.usuario' placeholder="Usuario" />
+			<input type="password" class="inputL" name="password" #password="ngModel" [(ngModel)]="usuarioModel.password" placeholder="Contraseña" />
+			<a href="#">¿Olvidaste tu contraseña?</a>
+			<button (click)='login()'>Ingresar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+        <img src="https://image.flaticon.com/icons/png/512/1024/1024602.png" style="width: 100px;" alt="">
+				<h1>¿Ya tienes una cuenta?</h1>
+				<p>Si ya tienes una cuenta, inicia sesión y entra a tu gestor de torneos</p>
+				<button class="ghost" id="signIn">Ingresar</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/43165/soccer-ball-emoji-clipart-md.png" style="width: 100px;" alt="">
+				<h1>¡Hola, amigo!</h1>
+				<p>Ingresa tus credencias o crea una cuenta para empezar a administrar tus ligas</p>
+				<button class="ghost" id="signUp">Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>

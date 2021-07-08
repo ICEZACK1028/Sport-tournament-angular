@@ -1,0 +1,4 @@
+<app-navbar *ngIf="usuarioLogueado()"></app-navbar>
+<router-outlet *ngIf="usuarioLogueado() == true"></router-outlet>
+<app-login *ngIf="usuarioLogueado() == false"></app-login> 
+
